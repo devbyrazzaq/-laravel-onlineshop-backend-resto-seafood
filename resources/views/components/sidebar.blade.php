@@ -31,9 +31,23 @@
                         <a class="nav-link"
                             href="{{ route("users.index") }}">User Data</a>
                     </li>
-                    <li class="{{ Request::is('dashboard-ecommerce-dashboard') ? 'active' : '' }}">
+                    <li class="{{ Request::is('users.create') ? 'active' : '' }}">
                         <a class="nav-link"
-                            href="{{ url('dashboard-ecommerce-dashboard') }}">Ecommerce Dashboard</a>
+                            href="{{ route("users.create") }}">Add New User</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown ">
+                <a href="#"
+                    class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Products</span></a>
+                <ul class="dropdown-menu">
+                    <li class='{{ Request::is('products.index') ? 'active' : '' }}'>
+                        <a class="nav-link"
+                            href="{{ route("products.index") }}">Product Data</a>
+                    </li>
+                    <li class="{{ Request::is('products.create') ? 'active' : '' }}">
+                        <a class="nav-link"
+                            href="{{ route("products.create") }}">Add New Product</a>
                     </li>
                 </ul>
             </li>
